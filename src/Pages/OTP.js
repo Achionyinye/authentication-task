@@ -1,6 +1,5 @@
-import React, { useRef, useState, useContext } from "react";
+import React, { useRef, useState } from "react";
 import { Form, Button, Card, Alert } from "react-bootstrap";
-import { useAuth } from "../Context/AuthContext";
 import { useNavigate } from "react-router-dom";
 
 
@@ -21,7 +20,7 @@ function OTP(props) {
         try {
             setError("");
             setLoading(true);
-            navigate("/")
+            navigate("/login")
         } catch {
             setError("Failed");
         }

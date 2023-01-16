@@ -1,11 +1,10 @@
-import React, { useRef, useState, useContext } from "react";
+import React, { useRef, useState } from "react";
 import { Form, Button, Card, Alert } from "react-bootstrap";
 import { Link, useNavigate } from "react-router-dom";
 import { useAuth } from "../../Context/AuthContext";
 
 
 function Login() {
-    const nameRef = useRef();
     const emailRef = useRef();
     const passwordRef = useRef();
     const { login } = useAuth();

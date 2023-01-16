@@ -5,10 +5,10 @@ import { useNavigate } from "react-router-dom";
 
 
 function Home() {
-    const [error, setError] = useState("")
+    const userName = localStorage.getItem("Username")
+
     const { currentUser } = useAuth()
     const navigate = useNavigate()
-    console.log(currentUser)
 
 
     const handleLogout = () => {
@@ -20,8 +20,7 @@ function Home() {
             <Card>
                 <Card.Body>
                     <h2 className="text-center mb-4"> Profile </h2>
-                    {error && <Alert variant="danger">{error}</Alert>}
-                    <strong>User name: </strong>{currentUser.name}<br />
+                    <strong>User name: </strong>{userName}<br />
                     <strong>Email: </strong>{currentUser.email}
                 </Card.Body>
             </Card>
