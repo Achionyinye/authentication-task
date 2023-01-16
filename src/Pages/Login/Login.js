@@ -19,7 +19,7 @@ function Login() {
             setError("");
             setLoading(true);
             await login(emailRef.current?.value, passwordRef.current?.value);
-            navigate("/")
+            navigate("/home")
         } catch {
             setError("Failed to sign in");
         }
@@ -50,7 +50,7 @@ function Login() {
                 </Card.Body>
             </Card>
             <div className="w-100 text-center mt-2">
-                Need an account? <Link to= "/signup">Sign Up</Link>
+                Need an account? <Link to= "/">Sign Up</Link>
             </div>
         </>
     );
