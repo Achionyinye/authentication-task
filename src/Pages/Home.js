@@ -14,7 +14,7 @@ function Home() {
     const handleLogout = () => {
         navigate("/login")
     }
-
+    
     return (
         <>
             <Card>

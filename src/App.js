@@ -20,10 +20,10 @@ function App() {
         <BrowserRouter>
           <AuthProvider>
             <Routes>
-              <Route path="/" element={<Home />} />
+              <Route path="/home" element={<Home />} />
               <Route path="/login" element={<Login />} />
               <Route path="/otp" element={<OTP />} />
-              <Route path="/signup" element={<Signup />} />
+              <Route path="/" element={<Signup />} />
             </Routes>
           </AuthProvider>
         </BrowserRouter>
